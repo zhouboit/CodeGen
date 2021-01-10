@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<type-mappings>
+    <db-type name="mysql">
+        <mapping jdbc="char" java="String" mybatis="varchar"/>
+        <mapping jdbc="varchar" java="String" mybatis="varchar"/>
+        <mapping jdbc="tinyblob" java="String" mybatis="varchar"/>
+        <mapping jdbc="tinytext" java="String" mybatis="varchar"/>
+        <mapping jdbc="blob" java="String" mybatis="varchar"/>
+        <mapping jdbc="text" java="String" mybatis="varchar"/>
+        <mapping jdbc="mediumblob" java="String" mybatis="varchar"/>
+        <mapping jdbc="mediumtext" java="String" mybatis="varchar"/>
+        <mapping jdbc="longblob" java="String" mybatis="varchar"/>
+        <mapping jdbc="longtext" java="String" mybatis="varchar"/>
+        <mapping jdbc="tinyint" java="int" mybatis="integer"/>
+        <mapping jdbc="smallint" java="int" mybatis="integer"/>
+        <mapping jdbc="mediumint" java="int" mybatis="integer"/>
+        <mapping jdbc="int" java="int" mybatis="integer"/>
+        <mapping jdbc="bigint" java="long" mybatis="bigint"/>
+        <mapping jdbc="float" java="float" mybatis="float"/>
+        <mapping jdbc="double" java="double" mybatis="double"/>
+        <mapping jdbc="decimal" java="double" mybatis="decimal"/>
+        <mapping jdbc="date" java="Date" mybatis="date"/>
+        <mapping jdbc="time" java="Date" mybatis="time"/>
+        <mapping jdbc="year" java="Date" mybatis="date"/>
+        <mapping jdbc="datetime" java="Date" mybatis="date"/>
+        <mapping jdbc="timestamp" java="Date" mybatis="date"/>
+    </db-type>
+</type-mappings>

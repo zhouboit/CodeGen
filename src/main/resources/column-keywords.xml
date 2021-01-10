@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<words>
+    <type name="java">
+        <key-word name='abstract'  des='表明类或者成员方法具有抽象属性' />
+        <key-word name='assert'  des='断言，用来进行程序调试' />
+        <key-word name='boolean'  des='基本数据类型之一，声明布尔类型的关键字' />
+        <key-word name='break'  des='提前跳出一个块' />
+        <key-word name='byte'  des='基本数据类型之一，字节类型' />
+        <key-word name='case'  des='用在switch语句之中，表示其中的一个分支' />
+        <key-word name='catch'  des='用在异常处理中，用来捕捉异常' />
+        <key-word name='char'  des='基本数据类型之一，字符类型' />
+        <key-word name='class'  des='声明一个类' />
+        <key-word name='const'  des='保留关键字，没有具体含义' />
+        <key-word name='continue'  des='回到一个块的开始处' />
+        <key-word name='default'  des='默认，例如，用在switch语句中，表明一个默认的分支。Java8 中也作用于声明接口函数的默认实现' />
+        <key-word name='do'  des='用在do-while循环结构中' />
+        <key-word name='double'  des='基本数据类型之一，双精度浮点数类型' />
+        <key-word name='else'  des='用在条件语句中，表明当条件不成立时的分支' />
+        <key-word name='enum'  des='枚举' />
+        <key-word name='extends'  des='表明一个类型是另一个类型的子类型。对于类，可以是另一个类或者抽象类；对于接口，可以是另一个接口' />
+        <key-word name='final'  des='用来说明最终属性，表明一个类不能派生出子类，或者成员方法不能被覆盖，或者成员域的值不能被改变，用来定义常量' />
+        <key-word name='finally'  des='用于处理异常情况，用来声明一个基本肯定会被执行到的语句块' />
+        <key-word name='float'  des='基本数据类型之一，单精度浮点数类型' />
+        <key-word name='for'  des='一种循环结构的引导词' />
+        <key-word name='goto'  des='保留关键字，没有具体含义' />
+        <key-word name='if'  des='条件语句的引导词' />
+        <key-word name='implements'  des='表明一个类实现了给定的接口' />
+        <key-word name='import'  des='表明要访问指定的类或包' />
+        <key-word name='instanceof'  des='用来测试一个对象是否是指定类型的实例对象' />
+        <key-word name='int'  des='基本数据类型之一，整数类型' />
+        <key-word name='interface'  des='接口' />
+        <key-word name='long'  des='基本数据类型之一，长整数类型' />
+        <key-word name='native'  des='用来声明一个方法是由与计算机相关的语言（如C/C++/FORTRAN语言）实现的' />
+        <key-word name='new'  des='用来创建新实例对象' />
+        <key-word name='package'  des='包' />
+        <key-word name='private'  des='一种访问控制方式：私用模式' />
+        <key-word name='protected'  des='一种访问控制方式：保护模式' />
+        <key-word name='public'  des='一种访问控制方式：共用模式' />
+        <key-word name='return'  des='从成员方法中返回数据' />
+        <key-word name='short'  des='基本数据类型之一,短整数类型' />
+        <key-word name='static'  des='表明具有静态属性' />
+        <key-word name='strictfp'  des='用来声明FP_strict（单精度或双精度浮点数）表达式遵循IEEE 754算术规范' />
+        <key-word name='super'  des='表明当前对象的父类型的引用或者父类型的构造方法' />
+        <key-word name='switch'  des='分支语句结构的引导词' />
+        <key-word name='synchronized'  des='表明一段代码需要同步执行' />
+        <key-word name='this'  des='指向当前实例对象的引用' />
+        <key-word name='throw'  des='抛出一个异常' />
+        <key-word name='throws'  des='声明在当前定义的成员方法中所有需要抛出的异常' />
+        <key-word name='transient'  des='声明不用序列化的成员域' />
+        <key-word name='try'  des='尝试一个可能抛出异常的程序块' />
+        <key-word name='void'  des='声明当前成员方法没有返回值' />
+        <key-word name='volatile'  des='表明两个或者多个变量必须同步地发生变化' />
+        <key-word name='while'  des='用在循环结构中' />
+    </type>
+</words>
