@@ -100,24 +100,42 @@ public class MapperXmlBuild {
             if ("DT_CREATE_DATE".equals(column.getColumnName()) || "DT_UPDATE_DATE".equals(column.getColumnName())) {
                 continue;
             }
-            stringBuffer
-                    .append("           <if test=\"").append(column.getLowerCamelCaseName()).append(" != null and ").append(column.getLowerCamelCaseName()).append(" != '' \">\n")
-                    .append("               <![CDATA[\n")
-                    .append("                   AND ").append(column.getColumnName()).append(" = ").append(column.getExpression()).append("\n")
-                    .append("               ]]>\n")
-                    .append("           </if>\n");
+            if ("Date".equals(column.getObjectType())) {
+                stringBuffer
+                        .append("           <if test=\"").append(column.getLowerCamelCaseName()).append(" != null \">\n")
+                        .append("               <![CDATA[\n")
+                        .append("                   ").append(column.getColumnName()).append(" = ").append(column.getExpression()).append(",\n")
+                        .append("               ]]>\n")
+                        .append("           </if>\n");
+            } else {
+                stringBuffer
+                        .append("           <if test=\"").append(column.getLowerCamelCaseName()).append(" != null and ").append(column.getLowerCamelCaseName()).append(" != '' \">\n")
+                        .append("               <![CDATA[\n")
+                        .append("                   AND ").append(column.getColumnName()).append(" = ").append(column.getExpression()).append("\n")
+                        .append("               ]]>\n")
+                        .append("           </if>\n");
+            }
         }
         stringBuffer.append("       </where>\n")
                 .append("   </sql>\n\n")
                 .append("   <sql id=\"sql_update\">\n")
                 .append("       <set>\n");
         for (Column column : table.getColumns()) {
-            stringBuffer
-                    .append("           <if test=\"").append(column.getLowerCamelCaseName()).append(" != null and ").append(column.getLowerCamelCaseName()).append(" != '' \">\n")
-                    .append("               <![CDATA[\n")
-                    .append("                   ").append(column.getColumnName()).append(" = ").append(column.getExpression()).append(",\n")
-                    .append("               ]]>\n")
-                    .append("           </if>\n");
+            if ("Date".equals(column.getObjectType())) {
+                stringBuffer
+                        .append("           <if test=\"").append(column.getLowerCamelCaseName()).append(" != null \">\n")
+                        .append("               <![CDATA[\n")
+                        .append("                   ").append(column.getColumnName()).append(" = ").append(column.getExpression()).append(",\n")
+                        .append("               ]]>\n")
+                        .append("           </if>\n");
+            } else {
+                stringBuffer
+                        .append("           <if test=\"").append(column.getLowerCamelCaseName()).append(" != null and ").append(column.getLowerCamelCaseName()).append(" != '' \">\n")
+                        .append("               <![CDATA[\n")
+                        .append("                   ").append(column.getColumnName()).append(" = ").append(column.getExpression()).append(",\n")
+                        .append("               ]]>\n")
+                        .append("           </if>\n");
+            }
         }
         stringBuffer.append("       </set>\n")
                 .append("   </sql>\n\n")
