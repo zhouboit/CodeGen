@@ -246,10 +246,6 @@ public class EntityBuild {
                         "        return (this.total + this.pageSize - 1) / this.pageSize;\n" +
                         "    }\n" +
                         "\n" +
-                        "    public static long getSerialVersionUID() {\n" +
-                        "        return serialVersionUID;\n" +
-                        "    }\n" +
-                        "\n" +
                         "    public int getPageSize() {\n" +
                         "        return pageSize;\n" +
                         "    }\n" +
