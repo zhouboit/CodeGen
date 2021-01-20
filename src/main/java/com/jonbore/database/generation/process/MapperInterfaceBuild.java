@@ -25,7 +25,9 @@ public class MapperInterfaceBuild {
         stringBuffer
                 .append("package ").append(configuration.getParentPackage()).append(".mapper;\n\n")
                 .append("import ").append(configuration.getParentPackage()).append(".entity.").append(table.getUpperCamelCaseName()).append(";\n\n")
+                .append("import org.springframework.stereotype.Component;\n\n")
                 .append(ConnectionSelect.getJavaAuthor(table))
+                .append("@Component\n")
                 .append("public interface ").append(table.getUpperCamelCaseName()).append("Mapper extends BaseInterfaceMapper<").append(table.getUpperCamelCaseName()).append("> {\n\n")
                 .append("}");
         try {
