@@ -89,6 +89,7 @@ public class ServiceImplBuild {
                         "     */\n" +
                         "    public abstract BaseInterfaceMapper<Entity> getBaseInterfaceMapper();\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public Page findByPage(Page page, Map<String, Object> map) throws ServiceException {\n" +
                         "        try {\n" +
                         "            if (map.get(\"keyword\") == null || StringUtils.isBlank((String) map.get(\"keyword\"))) {\n" +
@@ -106,10 +107,11 @@ public class ServiceImplBuild {
                         "        return page;\n" +
                         "    }\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject save(Entity entity) throws ServiceException {\n" +
                         "        JsonViewObject jsonViewObject = JsonViewObject.newInstance();\n" +
                         "        try {\n" +
-                        "            entity.setId(UUID.randomUUID().toString().replace(\"-\",\"\").toUpperCase());\n" +
+                        "            entity.setId(UUID.randomUUID().toString().replace(\"-\", \"\").toUpperCase());\n" +
                         "            entity.setCreateDate(new Date());\n" +
                         "            this.getBaseInterfaceMapper().save(entity);\n" +
                         "            jsonViewObject.success(entity.getId(), \"数据保存成功！\");\n" +
@@ -121,6 +123,7 @@ public class ServiceImplBuild {
                         "        return jsonViewObject;\n" +
                         "    }\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject update(Entity entity) throws ServiceException {\n" +
                         "        JsonViewObject jsonViewObject = JsonViewObject.newInstance();\n" +
                         "        try {\n" +
@@ -135,6 +138,7 @@ public class ServiceImplBuild {
                         "        return jsonViewObject;\n" +
                         "    }\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject deleteById(String id) throws ServiceException {\n" +
                         "        JsonViewObject jsonViewObject = JsonViewObject.newInstance();\n" +
                         "        try {\n" +
@@ -153,6 +157,7 @@ public class ServiceImplBuild {
                         "    }\n" +
                         "\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public Entity findById(String id) throws ServiceException {\n" +
                         "        Entity entity;\n" +
                         "        try {\n" +
@@ -164,6 +169,7 @@ public class ServiceImplBuild {
                         "        return entity;\n" +
                         "    }\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public List<Entity> findAll() throws ServiceException {\n" +
                         "        List<Entity> list;\n" +
                         "        try {\n" +
@@ -175,6 +181,7 @@ public class ServiceImplBuild {
                         "        return list;\n" +
                         "    }\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public List<Entity> findByMap(Map<String, Object> map) throws ServiceException {\n" +
                         "        List<Entity> list;\n" +
                         "        try {\n" +

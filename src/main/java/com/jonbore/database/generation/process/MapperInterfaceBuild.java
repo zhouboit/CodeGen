@@ -55,7 +55,6 @@ public class MapperInterfaceBuild {
                         " * @Author " + System.getProperty("user.name") + "\n" +
                         " * @Date " + dateFormat.format(new Date()) + "\n" +
                         " */\n")
-                .append("@Component\n")
                 .append("public interface BaseInterfaceMapper<Entity extends TrackableEntity> {\n\n")
                 .append("   void save(Entity entity);\n\n")
                 .append("   Integer update(Entity entity);\n\n")

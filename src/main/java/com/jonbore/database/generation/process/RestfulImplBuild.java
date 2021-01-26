@@ -115,6 +115,7 @@ public class RestfulImplBuild {
                         "     * @param page\n" +
                         "     * @return\n" +
                         "     */\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject getPage(@RequestBody Page<Entity> page) {\n" +
                         "\n" +
                         "        JsonViewObject jsonView = JsonViewObject.newInstance();\n" +
@@ -147,6 +148,7 @@ public class RestfulImplBuild {
                         "     *\n" +
                         "     * @return\n" +
                         "     */\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject getAll() {\n" +
                         "        JsonViewObject jsonView = JsonViewObject.newInstance();\n" +
                         "        try {\n" +
@@ -172,6 +174,7 @@ public class RestfulImplBuild {
                         "     * @param entity\n" +
                         "     * @return\n" +
                         "     */\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject getByWhere(@RequestBody Entity entity) {\n" +
                         "        JsonViewObject jsonView = JsonViewObject.newInstance();\n" +
                         "        String jsonStr = JSON.toJSONString(entity);\n" +
@@ -197,6 +200,7 @@ public class RestfulImplBuild {
                         "     * @param id\n" +
                         "     * @return JsonViewObject\n" +
                         "     */\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject getById(@PathVariable String id) {\n" +
                         "        JsonViewObject jsonView = JsonViewObject.newInstance();\n" +
                         "        try {\n" +
@@ -209,6 +213,7 @@ public class RestfulImplBuild {
                         "        return jsonView;\n" +
                         "    }\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject deleteByIds(String ids) {\n" +
                         "        JsonViewObject jsonView = JsonViewObject.newInstance();\n" +
                         "        String[] idArray = ids.split(\",\");\n" +
@@ -225,6 +230,7 @@ public class RestfulImplBuild {
                         "        return jsonView;\n" +
                         "    }\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject save(@RequestBody Entity entity) {\n" +
                         "        JsonViewObject jsonView = JsonViewObject.newInstance();\n" +
                         "        try {\n" +
@@ -238,6 +244,7 @@ public class RestfulImplBuild {
                         "        return jsonView;\n" +
                         "    }\n" +
                         "\n" +
+                        "    @Override\n" +
                         "    public JsonViewObject update(@RequestBody Entity entity) {\n" +
                         "        JsonViewObject jsonView = JsonViewObject.newInstance();\n" +
                         "        try {\n" +
